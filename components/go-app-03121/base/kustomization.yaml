@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-app-03121
+  janus-idp.io/tekton: go-app-03121
+  backstage.io/kubernetes-id: go-app-03121
+  backstage.io/kubernetes-namespace: go-app-03121 
+  app.kubernetes.io/part-of: go-app-03121
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
